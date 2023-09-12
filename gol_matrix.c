@@ -18,9 +18,7 @@ void printMatrix(point *matrix) {
 
 void countNeighbors(point *matrix) {
     point *ptr = matrix;
-    //ptr = ptr + row * 7 + col;
-
-    
+   
     if ((ptr+1)->state == '*') ptr->sum++;
     if ((ptr-1)->state == '*') ptr->sum++;
     if ((ptr+6)->state == '*') ptr->sum++;
