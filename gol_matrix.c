@@ -1,20 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printMatrix(char *matrix) {
+void printMatrix(unsigned int *matrix) {
     for (int i = 0; i < 5; i++){
         for (int j = 0; j < 5; j++){
-            printf("%c", *(matrix + i * 5+ j));
+            printf("%d", *(matrix + 5 * i + j - 1));
         }
+        printf("\n");
     }
 } 
 
 int main() {
-    char matrix[5][5];
-    for (int j = 0; j < 5; j++) {
-        matrix[2][j] = '*' ;
+    
+    unsigned int matrix[5][5];
+    unsigned int *ptr = matrix;
+    for (int i = 0; i < 5; i++){{}
+        for (int j = 0; j < 5; j++) {
+            if (i == 2){
+                matrix[i][j] = 1;
+            } else {
+                matrix[i][j] = 0;
+            }           
+        }
     }
-    printMatrix(*matrix);
+    printMatrix(ptr);
     
 
     return EXIT_SUCCESS;
