@@ -87,7 +87,7 @@ int main (void) {
         {' ', ' ', ' ', ' ', ' '},
         {' ', ' ', ' ', ' ', ' '},
         {' ', ' ', ' ', ' ', ' '},
-    };;
+    };
 
     //if user want to update more times,
     //he can type "yes" or "no" to decide whether to continue the game
