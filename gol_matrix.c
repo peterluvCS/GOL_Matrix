@@ -23,7 +23,8 @@ int main() {
             }           
         }
     }
-    printMatrix(ptr);
+
+    printf("%d\n", countNeighbors(matrix, 2, 2));
     
 
     return EXIT_SUCCESS;
