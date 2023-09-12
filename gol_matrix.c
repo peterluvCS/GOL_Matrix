@@ -10,6 +10,23 @@ void printMatrix(unsigned int *matrix) {
     }
 } 
 
+unsigned int countNeighbors(char array[5][5],int row, int col) {
+    char * ptr = &array[0][0];
+    ptr = ptr + row * 5 + col;
+
+    unsigned int sum = 0;
+    if (*(ptr+1) == '*') sum++;
+    if (*(ptr-1) == '*') sum++;
+    if (*(ptr+5) == '*') sum++;
+    if (*(ptr-5) == '*') sum++;
+    if (*(ptr+4) == '*') sum++;
+    if (*(ptr+6) == '*') sum++;
+    if (*(ptr-4) == '*') sum++;
+    if (*(ptr-6) == '*') sum++;
+
+    return sum;
+}
+
 int main() {
     
     unsigned int matrix[5][5];
